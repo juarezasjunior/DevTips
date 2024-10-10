@@ -2,22 +2,22 @@
 using System;
 using System.Linq;
 
-namespace EntityFrameworkCoreExample
+namespace EntityFrameworkCoreExemplo
 {
-    public class Product
+    public class Produto
     {
         public int Id { get; set; }
-        public string Name { get; set; }
-        public decimal Price { get; set; }
+        public string Nome { get; set; }
+        public decimal Preco { get; set; }
     }
 
     public class AppDbContext : DbContext
     {
-        public DbSet<Product> Products { get; set; }
+        public DbSet<Produto> Produtos { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite("Data Source=products.db");
+            optionsBuilder.UseSqlite("Data Source=produtos.db");
         }
     }
 
@@ -30,14 +30,14 @@ namespace EntityFrameworkCoreExample
                 context.Database.EnsureCreated();
 
                 // Inserindo um novo produto
-                context.Products.Add(new Product { Name = "Laptop", Price = 1500.99m });
+                context.Produtos.Add(new Produto { Nome = "Laptop", Preco = 1500.99m });
                 context.SaveChanges();
 
                 // Buscando e exibindo os produtos no banco de dados
-                var products = context.Products.ToList();
-                foreach (var product in products)
+                var produtos = context.Produtos.ToList();
+                foreach (var produto in produtos)
                 {
-                    Console.WriteLine($"Id: {product.Id}, Name: {product.Name}, Price: {product.Price}");
+                    Console.WriteLine($"Id: {produto.Id}, Nome: {produto.Nome}, Preco: {produto.Preco}");
                 }
             }
         }

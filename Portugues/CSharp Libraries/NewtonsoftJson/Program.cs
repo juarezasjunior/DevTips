@@ -1,13 +1,13 @@
 ﻿using Newtonsoft.Json;
 using System;
 
-namespace NewtonsoftJsonExample
+namespace NewtonsoftJsonExemplo
 {
-    public class Product
+    public class Produto
     {
         public int Id { get; set; }
-        public string Name { get; set; }
-        public decimal Price { get; set; }
+        public string Nome { get; set; }
+        public decimal Preco { get; set; }
     }
 
     class Program
@@ -15,16 +15,16 @@ namespace NewtonsoftJsonExample
         static void Main(string[] args)
         {
             // Criando um objeto de exemplo
-            Product product = new Product { Id = 1, Name = "Laptop", Price = 1500.99m };
+            Produto produto = new Produto { Id = 1, Nome = "Laptop", Preco = 1500.99m };
 
             // Serializando o objeto para JSON
-            string json = JsonConvert.SerializeObject(product);
+            string json = JsonConvert.SerializeObject(produto);
             Console.WriteLine("Objeto serializado: " + json);
 
             // Desserializando o JSON de volta para um objeto
-            Product deserializedProduct = JsonConvert.DeserializeObject<Product>(json);
+            Produto produtoDesserializado = JsonConvert.DeserializeObject<Produto>(json);
             Console.WriteLine("Objeto desserializado: ");
-            Console.WriteLine($"Id: {deserializedProduct.Id}, Name: {deserializedProduct.Name}, Price: {deserializedProduct.Price}");
+            Console.WriteLine($"Id: {produtoDesserializado.Id}, Nome: {produtoDesserializado.Nome}, Preco: {produtoDesserializado.Preco}");
         }
     }
 }
