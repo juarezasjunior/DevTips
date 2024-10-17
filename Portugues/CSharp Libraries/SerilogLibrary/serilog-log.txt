@@ -1,0 +1,6 @@
+2024-10-17 09:26:57.028 -03:00 [INF] A aplicação começou.
+2024-10-17 09:26:57.057 -03:00 [WRN] Este é um aviso.
+2024-10-17 09:26:57.057 -03:00 [ERR] Um erro ocorreu no processo.
+2024-10-17 09:27:45.186 -03:00 [INF] A aplicação começou.
+2024-10-17 09:27:45.210 -03:00 [WRN] Este é um aviso.
+2024-10-17 09:27:45.210 -03:00 [ERR] Um erro ocorreu no processo.
