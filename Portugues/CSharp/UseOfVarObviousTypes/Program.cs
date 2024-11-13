@@ -6,7 +6,7 @@
         var total = 100;
 
         // Prefira o tipo explícito para evitar ambiguidade
-        List<int> numeros = new List<int> { 1, 2, 3, 4, 5 };
+        List<int> numeros = Program.GetAList();
 
         // `decimal` com `var` é evidente pelo valor
         var valor = 100.0m;
@@ -15,4 +15,6 @@
         Console.WriteLine($"Primeiro número: {numeros[0]}");
         Console.WriteLine($"Valor: {valor}");
     }
+
+    public static List<int> GetAList() => new List<int> { 1, 2, 3, 4, 5 };
 }
